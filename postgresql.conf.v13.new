@@ -1,8 +1,9 @@
-listen_addresses = localhost     # what IP address(es) to listen on;
+listen_addresses = '*'     # what IP address(es) to listen on;
 port = 5432                             # (change requires restart)
-max_connections = 256                   # (change requires restart)
+max_connections = 16384                   # (change requires restart)
+superuser_reserved_connections = 3
 shared_buffers = 80000MB                        # min 128kB
-huge_pages = on                 # on, off, or try
+huge_pages = try                 # on, off, or try
 temp_buffers = 4000MB                   # min 800kB
 work_mem = 4000MB                               # min 64kB
 maintenance_work_mem = 512MB            # min 1MB
